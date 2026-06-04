@@ -15,8 +15,12 @@ Tech Stack
 3. Database : SQLite3
 4. AI API : Gemini API
 
-Project Structure
+To ensure API Integration created a `.env` file and added:
+```
+GEMINI_API_KEY=your_api_key_here
+```
 
+Project Structure
 1. `MIRA/` : Main Django application
 2. ` templates/` : HTML templates
 3. `static/` : CSS and image files
@@ -24,49 +28,4 @@ Project Structure
 5. `views.py` : Application logic
 6. `forms.py` : Django forms
 
-Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/MIRA-Repo.git
-```
-
-Navigate to project directory:
-
-```bash
-cd django_1
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run migrations:
-
-```bash
-python manage.py migrate
-```
-
-Start server:
-
-```bash
-python manage.py runserver
-```
-
-Open browser:
-
-```text
-http://127.0.0.1:8000/
-```
-
-## Environment Variables
-
-Create a `.env` file and add:
-
-```text
-GEMINI_API_KEY=your_api_key_here
-```
 Aditi Jain
