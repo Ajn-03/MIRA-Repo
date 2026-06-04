@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import url('https://googleapis.com');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+    min-height: 100vh;
+    
+}
+header {
+  background-color: #cce6ff;
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+    position: relative;
+
+  
+}
+img {
+  content: url("images/mira_logo.png");
+  width: 15vw;
+  height: 15vh;
+  }
+
+.mobile-text {
+  display: none;
+}
+/* When screen is less than 960px */
+@media (max-width: 960px) {
+  img {
+    display: none;
+  }
+  .mobile-text {
+    display: block;
+    color: #3399ff;
+    font-size: clamp(16px, 10vw, 100px);
+  }
+}
+#navbar {
+  background-color: #006699;
+  width: 100%;
+  height: 8vh;
+  top: 0vh;
+  box-sizing: border-box;
+  position: relative;
+}
+ul{
+  list-style-type: none;
+}
+
+ul li {
+  float: left;
+}
+#navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  background-color: #111111;
+} 
+
+#record_tab {
+  box-sizing: border-box;
+  margin: 20px auto 0 auto;
+  width: 95%;          /* Gives a slight margin on the left/right of the screen */
+  overflow-x: auto;    /* Enables horizontal scrolling if the screen is too narrow */
+  background: white;   /* Moves background to the wrapper container */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: makes the card look nice */
+}
+
+table {
+  display: table;      /* Explicitly forces standard table behavior */
+  position: static;    /* Completely overrides any absolute positioning */
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+  table-layout: auto;  /* Allows columns to scale naturally by content */
+}
+
+/* Style headers and data cells uniformly */
+th, td {
+  padding: 12px 15px;  /* Adds internal spacing so text never touches borders */
+  text-align: left;    /* Aligns your content clearly */
+  border: 1px solid #000000; /* Clean, unified grid borders */
+}
+
+/* Targets columns 1 through 6 */
+td:nth-child(-n+6),
+th:nth-child(-n+6) {
+  white-space: nowrap; /* Prevents text wrapping entirely for the first 6 columns */
+}
+
+/* Targets the 7th (Remarks) column */
+td:nth-child(7),
+th:nth-child(7) {
+  width: 100%;         /* Consumes all remaining horizontal space */
+  white-space: normal; /* Force-allows long text to wrap beautifully */
+}
+#td_8{
+  list-style-type: none;
+}
+
+#td_8 li a {
+  color: white;
+display: block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  background-color:#006699;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 3px;
+  text-align: center;
+}
+#td_8 a:hover {
+  background-color:#cce6ff;
+  color: black;
+} 
+
+table th {background:#cce6ff;
+ ;
+}
+
+table td{
+  background-color: lightgrey;
+}

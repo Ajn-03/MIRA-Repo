@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	      <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	      	{% load static %}
+	      <link rel="stylesheet" href="{% static 'MIRA/records.css' %}">
+	      	      <!--<link href="home.css" rel="stylesheet">-->
+
+</head>
+<body>
+  <header id="head">
+  	<img src="">
+  	<div class="mobile-text">MIRA</div>
+  </header>
+    <ul id="navbar">
+    	<li><a href="{% url 'MIRA:login'%}">Home</a></li>
+      <li><a href="{% url 'MIRA:sign_up'%}">Sign Up</a></li>
+      <li><a href="{% url 'MIRA:health_predict'%}">Know Health Remarks</a></li>
+      <li><a href="{% url 'MIRA:records'%}">Manage Records</a></li>
+      
+    </ul>
+<!--<h3>Booked Slots</h3>-->
+        <div id="record_tab">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>DOB</th>
+                        <th>Glucose</th>
+                        <th>Haemoglobin</th>
+                        <th>Cholesterol</th>
+                        <th>Remarks</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in records %}
+                    <tr>
+                        <td>{{ i.user_name }}</td>
+                        <td>{{ i.email_add }}</td>
+                        <td>{{ i.dob }}</td>
+                        <td>{{i.glucose}}</td>
+                        <td>{{i.haemoglobin}}</td>
+                        <td>{{i.cholesterol}}</td>
+                        <td>{{i.remarks}}</td>
+                        <td><ol id=td_8><li><a class="edit" href="{% url 'MIRA:edit_view' i.id %}">Edit</a></li>
+                        	<li><a href="{% url 'MIRA:delete_view' i.id %}">Delete</a></li></ol>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>
