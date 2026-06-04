@@ -28,4 +28,7 @@ Project Structure
 5. `views.py` : Application logic
 6. `forms.py` : Django forms
 
+Preview of Manage_Records View for user Aditi:
+<img width="1355" height="627" alt="Screenshot 2026-06-04 141318" src="https://github.com/user-attachments/assets/2f798a3a-4269-4985-9f5d-a8a563520c66" />
+
 Aditi Jain
